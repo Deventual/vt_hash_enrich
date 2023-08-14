@@ -1,0 +1,15 @@
+vt_api_key: <VT_API_key>
+hash_types_for_enrichment: [sha256, sha1, md5] # advised not to modify/add types in the type per line format
+fields_type_mode: [type, value, threat_label, file_name] # do not change hardcoded
+fields_indicator_mode: [threat_label, vt_score, sha256, sha1, md5, creation_date] # Can be modified by user
+fields_indicator_max_mode: [threat_label, vt_score, sha256, sha1, md5, ssdeep, lang, creation_date, first_seen_itw_date, last_analysis_date] # Can be modified by user
+
+# supported field types:
+#   md5, sha1, sha256, threat_label, creation_date, vt_score, vhash, tlsh, authentihash, ssdeep,
+#   magic, rich_pe_header_hash, first_seen_itw_date, last_analysis_date, first_submission_date, last_submission_date, last_modification_date
+
+# Nested attributes paths
+nested_attributes:
+  lang: [pe_info, resource_details, 0, lang]
+  threat_label: [popular_threat_classification, suggested_threat_label]
+
