@@ -20,10 +20,17 @@ Script to retrieve and enrich hash-based IoCs using the VirusTotal API.
 
 # Usage options:
   -h, --help            show this help message and exit
+  
   -i INPUT, --input INPUT
+  
                         Plain text input file containing hashes
+                        
   -o OUTPUT, --output OUTPUT
+  
                         Output file name for enriched hashes
+                        
   -f {type,indicator,max,text}, --format {type,indicator,max,text}
+  
                         Formats of output: type - type per line (csv) | indicator - indicator per line (csv) | max - maximum context indicator per line (csv) | text - hash per line (plain text)
+                        
 
